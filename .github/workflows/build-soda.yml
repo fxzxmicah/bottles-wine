@@ -43,6 +43,7 @@ jobs:
         working-directory: /home/runner/work/wine-tkg-git/wine-tkg-git/non-makepkg-builds/
         run: |
           mv wine-tkg-* soda-$WINE_VERSION-$REVISION-x86_64
+          rm -r soda-$WINE_VERSION-$REVISION-x86_64/include
           tar cJvf soda-$WINE_VERSION-$REVISION-x86_64.tar.xz soda-$WINE_VERSION-$REVISION-x86_64
           mv soda-$WINE_VERSION-$REVISION-x86_64.tar.xz /tmp/soda-$WINE_VERSION-$REVISION-x86_64.tar.xz
 
