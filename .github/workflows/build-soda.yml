@@ -6,7 +6,8 @@ on:
   workflow_dispatch:
 env:
   WINE_VERSION: '9.0'
-  BRANCH: proton_9.0-rc
+  #https://github.com/Frogging-Family/wine-tkg-git/blob/e9125cb423399e28576a3f1a482feefb4520664a/wine-tkg-git/customization.cfg#L42
+  BRANCH: valve-exp
   REVISION: '2'
 jobs:
   build:
@@ -29,7 +30,7 @@ jobs:
         run: |
           git clone https://github.com/Frogging-Family/wine-tkg-git.git
           cd wine-tkg-git/wine-tkg-git
-          sed -i "s/_LOCAL_PRESET=\"\"/_LOCAL_PRESET=\"valve-exp-bleeding\"/g" customization.cfg
+          sed -i "s/_LOCAL_PRESET=\"\"/_LOCAL_PRESET=\"$BRANCH\"/g" customization.cfg
           sed -i "s/_NOLIB32=\"false\"/_NOLIB32=\"wow64\"/" wine-tkg-profiles/advanced-customization.cfg
 
       - name: get/set the soda recipe
