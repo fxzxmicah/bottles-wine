@@ -7,7 +7,7 @@ on:
 env:
   WINE_VERSION: '9.0'
   #https://github.com/Frogging-Family/wine-tkg-git/blob/e9125cb423399e28576a3f1a482feefb4520664a/wine-tkg-git/customization.cfg#L42
-  BRANCH: valve-exp
+  BRANCH: valve
   REVISION: '2'
 jobs:
   build:
