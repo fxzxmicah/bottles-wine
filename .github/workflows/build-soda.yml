@@ -6,12 +6,12 @@ on:
   workflow_dispatch:
 env:
   WINE_VERSION: '9.0'
-  #https://github.com/Frogging-Family/wine-tkg-git/blob/e9125cb423399e28576a3f1a482feefb4520664a/wine-tkg-git/customization.cfg#L42
-  BRANCH: valve
+  # https://github.com/Frogging-Family/wine-tkg-git/blob/e9125cb423399e28576a3f1a482feefb4520664a/wine-tkg-git/customization.cfg#L42
+  BRANCH: valve-exp-bleeding
   REVISION: '2'
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:        
       - uses: actions/checkout@v4
