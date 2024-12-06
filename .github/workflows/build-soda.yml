@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 env:
   WINE_VERSION: '9.0'
-  BRANCH: experimental_9.0
+  BRANCH: proton_9.0-rc
   REVISION: '2'
 jobs:
   build:
