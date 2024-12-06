@@ -30,6 +30,7 @@ jobs:
           curl https://raw.githubusercontent.com/bottlesdevs/build-tools/main/runners/vaniglia/wine-tkg.cfg >> customization.cfg
           sed -i "s/_staging_version=\"\"/_staging_version=\"v$WINE_VERSION\"/g" customization.cfg
           sed -i "s/_plain_version=\"\"/_plain_version=\"wine-$WINE_VERSION\"/g" customization.cfg
+          sed -i "s/_NOLIB32=\"false\"/_NOLIB32=\"wow64\"/" wine-tkg-profiles/advanced-customization.cfg
 
       - name: start build
         working-directory: /home/runner/work/wine-tkg-git/wine-tkg-git/
